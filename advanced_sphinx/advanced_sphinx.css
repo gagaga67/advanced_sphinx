@@ -1,0 +1,72 @@
+/* $Id: advanced_sphinx.css, v 1.0 2011/07/05 19:59:16 gagaga Exp $ */
+
+/**
+ * Search form.
+ */
+.search-form {
+  margin-bottom: 1em;
+}
+.search-form p {
+  margin-top: 0;
+  margin-bottom: 0.2em;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.search-form input {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.search-advanced .criterion {
+  float: left;
+  margin-right: 2em;
+}
+.search-advanced .action {
+  float: left;
+  clear: left;
+}
+
+.result-folded .info-result {
+ font-size: 90%;
+}
+ul.search-results,
+#columns #content ul.search-results
+{
+ margin-left:0px;
+ padding-left:20px;
+}
+
+li.result-folded,
+#columns #content ul li.result-folded{
+ margin-left:0px;
+ list-style: none;
+ background: none;
+ padding-left: 15px;
+}
+li.result-folded .number-result,
+#columns #content ul li.result-folded .number-result{
+ margin-left: -25px;
+ color: #999999;
+ font-size:13px
+}
+.result-folded .info-result {
+ font-size: 90%;
+}
+
+.search-sorted .sortnow {
+ background-color: #E8E9EC;
+ padding: 5px;
+}
+
+#advanced-search h3 {
+    font-weight: normal;
+}
+
+#advanced-sphinx-search-form .container-inline label{
+    display: block;
+}
+
+#advanced-sphinx-search-form #edit-filters .container-inline div{
+    display: inline;
+    float: left;
+    margin-right: 20px;
+}
