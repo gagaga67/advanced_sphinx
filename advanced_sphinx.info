@@ -1,0 +1,8 @@
+name = Advanced sphinx
+description = Sphinx search integration for Drupal, based on XMLPipe source type and support for main+delta index scheme.
+package = advanced_sphinx
+version = 7.x-1.x-dev
+core = 7.x
+files[] = advanced_sphinx.module
+configure = admin/config/search/advanced_sphinx
+project = "advanced_sphinx"
