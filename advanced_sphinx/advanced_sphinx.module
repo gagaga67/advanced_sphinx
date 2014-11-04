@@ -293,7 +293,7 @@ function advanced_sphinx_get_node_text(&$node, $build_mode) {
 }
 
 function advanced_sphinx_get_node_text_fast(&$node, $build_mode) {
-  $text = $node->body;
+  $text = isset($node->body) ? $node->body : '';
   #drupal_set_message('<pre>' . print_r($node, 1) . '</pre>');
   // Strip off all tags, but insert space before/after them to keep word boundaries.
   $text = str_replace(array('<', '>', '[', ']'), array(' <', '> ', ' ', ' '), $text);
@@ -308,6 +308,7 @@ function advanced_sphinx_get_node_text_fast(&$node, $build_mode) {
 }
 
 function advanced_sphinx_get_node_count($nid) {
+  $result = new stdClass();
   $result->comment_count = 0;
   $result->files_count = 0;
   if (module_exists('comment')) {

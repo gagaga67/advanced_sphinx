@@ -271,8 +271,12 @@ function advanced_sphinx_get_items_result_main($search_options, $search_results)
     $items_result['username'] = theme('username', array('account' => $node));
     $items_result['type'] = $node->type;
     $items_result['date'] = $node->created;
-    $items_result['file'] = $node->files_count;
-    $items_result['comment_count'] = $node->comment_count;
+    if (isset($node->files_count)) {
+      $items_result['file'] = $node->files_count;
+    }
+    if (isset($node->comment_count)) {
+      $items_result['comment_count'] = $node->comment_count;
+    }
     $result_wrapper['result'] .= theme('advanced_sphinx_items_result_main', array('result' => $items_result));
   $i++;
   }
